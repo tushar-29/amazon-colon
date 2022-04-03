@@ -1,0 +1,81 @@
+const product = [
+    {
+        id: 1,
+        name: "Tribit XFree Go Headphones with Mic, Wireless Bluetooth Headphone",
+        rating: 5,
+        price: 1399.00,
+        img: "https://m.media-amazon.com/images/I/71DbAq4nG1L._SL1460_.jpg",
+    },
+    {
+        id: 2,
+        name: "boAt Bassheads 100 in Ear Wired Earphones with Mic",
+        rating: 3,
+        price: 499.00,
+        img: "https://m.media-amazon.com/images/I/719elVA3FvL._SL1500_.jpg",
+    },
+    {
+        id: 3,
+        name: "Redmi Note 11S (Space Black, 6GB RAM, 128GB Storage)",
+        rating: 2,
+        price: 16999.00,
+        img: "https://m.media-amazon.com/images/I/71kFQTnr3eL._SL1500_.jpg",
+    },
+    {
+        id: 4,
+        name: 'HP 247 G8 Laptop (Athlon P-3045B HD/ 14" HD (35.56 cms)',
+        rating: 4,
+        price: 31490.00,
+        img: "https://m.media-amazon.com/images/I/71Ff0Ap49HS._SL1500_.jpg",
+    },
+    {
+        id: 5,
+        name: "Beardo Hair Thickening Sulphate Free Shampoo for Men 200 ml",
+        price: 299.00,
+        rating: 5,
+        img: "https://m.media-amazon.com/images/I/51P218MuieL._SL1500_.jpg",
+    },
+    {
+        id: 6,
+        name: "NIVEA Men Creme, Dark Spot Reduction",
+        price: 139.00,
+        rating: 4,
+        img: "https://m.media-amazon.com/images/I/51NYSJRXJ6L._SL1000_.jpg",
+    },
+    {
+        id: 7,
+        name: "Vaseline Intensive Care Deep Moisture Nourishing Body Lotion",
+        price: 265.00,
+        rating: 3,
+        img: "https://m.media-amazon.com/images/I/518U63NIvRL._SL1000_.jpg",
+    },
+    {
+        id: 8,
+        name: "As a Man Thinketh",
+        price: 59.00,
+        rating: 3,
+        img: "https://m.media-amazon.com/images/P/9353040345.01._SCLZZZZZZZ_SX500_.jpg",
+    },
+    {
+        id: 9,
+        name: "Siddhartha",
+        price: 89.00,
+        rating: 3,
+        img: "https://m.media-amazon.com/images/P/0141189576.01._SCLZZZZZZZ_SX500_.jpg",
+    },
+    {
+        id: 10,
+        name: "The Diary of a Young Girl",
+        price: 429.00,
+        rating: 4,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81lZ-9E4F-S.jpg",
+    },
+    {
+        id: 11,
+        name: "Mahatma Gandhi Autobiography: The Story Of My Experiments With Truth",
+        price: 1159.00,
+        rating: 4,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81XqXdOE5mS.jpg",
+    },
+];
+
+export { product };
