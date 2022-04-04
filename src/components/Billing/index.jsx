@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
     BillingButton, BillingContainer, BillingH1, BillingItems,
     BillingLeft, BillingRight, BillingRightBox, BillingSum, BillingWrap
@@ -11,15 +11,14 @@ import CratCard from "../CratCard";
 
 export default function Billing() {
 
-
-    const [{basket}] = useStateValue();
+    const [{basket, user}] = useStateValue();
     let i=0;
 
     return(
         <BillingContainer>
             <BillingWrap>
                 <BillingLeft>
-                    <BillingH1>Your Shopping Basket</BillingH1>
+                    <BillingH1>{ user && user.email.slice(0, 6)+'\'s'} Your Shopping Basket</BillingH1>
                     <hr />
                     <BillingItems>
                         {

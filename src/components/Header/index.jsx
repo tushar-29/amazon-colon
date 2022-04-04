@@ -6,7 +6,6 @@ import { product } from "./Product";
 
 export default function Header() {
 
-
     return(
         <HeaderContainer>
             <HeaderImage />

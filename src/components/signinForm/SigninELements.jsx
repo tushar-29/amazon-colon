@@ -26,6 +26,11 @@ export const SigninBox = styled.div`
   padding: 15px 20px;
   width: 22%;
   border-radius: 10px;
+`;
+
+export const InputBox = styled.div`
+  display: flex;
+  flex-direction: column;
   
    label {
     font-size: 15px;

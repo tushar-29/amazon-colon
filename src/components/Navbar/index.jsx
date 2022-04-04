@@ -8,11 +8,18 @@ import AmazonLogo from "../../images/AmazonLogo.png";
 import { BsSearch } from "react-icons/bs"
 import { BsBasket2Fill } from "react-icons/bs";
 import {useStateValue} from "../StateProvider";
+import {auth} from "../../firebase_setup";
 
 
 export default function Navbar() {
-    const [{basket}] = useStateValue();
+    const [{basket, user}] = useStateValue();
 
+    const handleAuthentication = () => {
+        if(user) {
+            auth.signOut();
+            alert("You have been Sign Out Successfully");
+        }
+    }
 
     return(
         <NavbarContainer>
@@ -27,9 +34,13 @@ export default function Navbar() {
             </NavbarSearchWrapper>
 
             <NavbarMenu>
-                <NavbarItems to={"/sign-in"}>
-                    <NavbarTopText>Hello Guest</NavbarTopText>
-                    <NavbarBottomText>Sign in</NavbarBottomText>
+                <NavbarItems to={!(user) && "/sign-in"}>
+                    <div onClick={handleAuthentication}>
+                        <NavbarTopText>Hello {user ? user.email.slice(0, 6) : 'Guest'}</NavbarTopText>
+                        <NavbarBottomText>
+                        {user ?  'Sign Out' : 'Sign In' }
+                        </NavbarBottomText>
+                    </div>
                 </NavbarItems>
 
                 <NavbarItems to={"/returns-orders"}>
