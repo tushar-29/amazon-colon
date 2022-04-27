@@ -6,11 +6,11 @@ import {
 import {useStateValue} from "../StateProvider";
 import {getBasketTotal} from "../reducer";
 import CratCard from "../CratCard";
-
+import {useNavigate} from "react-router-dom";
 
 
 export default function Billing() {
-
+    const navigate = useNavigate()
     const [{basket, user}] = useStateValue();
     let i=0;
 
@@ -20,12 +20,13 @@ export default function Billing() {
                 <BillingLeft>
                     <BillingH1>{ user && user.email.slice(0, 6)+'\'s'} Your Shopping Basket</BillingH1>
                     <hr />
+
                     <BillingItems>
-                        {
-                            basket.map((item) => (
-                                <CratCard item={item} key={i++} />
-                            ))
-                        }
+                            {
+                                basket.map((item) => (
+                                        <CratCard item={item} key={i++} show={true}/>
+                                ))
+                            }
                     </BillingItems>
                 </BillingLeft>
 
@@ -34,7 +35,9 @@ export default function Billing() {
                         <BillingSum><strong>Subtotal ({basket.length} items) :</strong>
                             ₹{getBasketTotal(basket)}.00
                         </BillingSum>
-                        <BillingButton>Proceed to Checkout</BillingButton>
+                        <BillingButton onClick={ (e) => navigate('/check-out') }>
+                            Proceed to Checkout
+                        </BillingButton>
                     </BillingRightBox>
                 </BillingRight>
             </BillingWrap>

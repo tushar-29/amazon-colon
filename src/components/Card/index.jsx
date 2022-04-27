@@ -6,7 +6,7 @@ import {useStateValue} from "../StateProvider";
 
 export default function Card({ title, price, rating, img, id}) {
 
-    const [{basket}, dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue();
 
     //dispatch is object which send item to data layer
     const addToCart = () => {

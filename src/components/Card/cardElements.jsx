@@ -11,6 +11,12 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+  transition: .3s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.05) translateX(-5px);
+    box-shadow: 5px 5px #ccc;
+  }
 `;
 
 export const CardTitle = styled.h3`

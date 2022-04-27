@@ -4,7 +4,8 @@ import {CartButton, CratBox, CratCardContainer, CratLeft,
 import {useStateValue} from "../StateProvider";
 
 
-export default function CratCard({ item }) {
+
+export default function CratCard({ item, show }) {
 
     const [{basket}, dispatch] = useStateValue();
     const removeFromBasket = () => {
@@ -26,7 +27,10 @@ export default function CratCard({ item }) {
                     <CratRating>
                         { Array(item.rating).fill().map((_, i) => (<Cratp key={i}>⭐</Cratp>)) }
                     </CratRating>
-                    <CartButton onClick={removeFromBasket}>Remove From Basket</CartButton>
+                    {
+                        (show) &&
+                        <CartButton onClick={removeFromBasket}>Remove From Basket</CartButton>
+                    }
                 </CratRight>
             </CratBox>
         </CratCardContainer>

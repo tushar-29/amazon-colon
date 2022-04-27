@@ -54,7 +54,7 @@ export default function Navbar() {
                 </NavbarItems>
             </NavbarMenu>
 
-            <NavbarBasketWrap to={"/check-out"}>
+            <NavbarBasketWrap to={"/basket"}>
                 <NavbarBasketButton>
                     <BsBasket2Fill />
                 </NavbarBasketButton>
