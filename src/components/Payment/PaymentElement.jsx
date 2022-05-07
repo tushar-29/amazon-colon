@@ -24,13 +24,10 @@ export const Paymentitem = styled.div`
 
 export const PaymentCheckout = styled.div`
   display: flex;
-  width: 100%;
   background: #fff;
-  flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   padding: 0 30px 30px 30px;
-  gap: 30px;
   
   h4{
     font-size: 1.4rem;
@@ -38,7 +35,6 @@ export const PaymentCheckout = styled.div`
 `;
 
 export const PaymentAddress = styled.div`
-  flex-grow: 2;
     p{
       font-size: 1rem;
       width: 200px;
@@ -46,16 +42,38 @@ export const PaymentAddress = styled.div`
       
     }
 `;
+
+export const PaymentEntry = styled.div`
+  form{
+    display: flex;
+  }
+`;
+
+export const PaymentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  flex-grow: 2;
+  width: 400px;
+`;
+
+
+
+export const PaymentCard = styled.div`
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: #ccc solid;
+  border-radius: 5px;
+`;
+
+
 export const PaymentRightBox = styled.div`
   display: flex;
   padding: 30px 60px;
   flex-direction: column;
   justify-content: space-between;
   background-color: #eee;
-`;
-
-export const PaymentCard = styled.div`
-      
 `;
 
 export const PaymentSum = styled.p`

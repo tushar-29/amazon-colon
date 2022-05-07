@@ -31,7 +31,13 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.auth_user
             }
+
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            }
     }
 };
-    
+
 export default reducer;
